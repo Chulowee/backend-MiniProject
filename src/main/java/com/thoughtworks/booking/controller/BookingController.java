@@ -26,4 +26,10 @@ public class BookingController {
         return new ResponseEntity<>(isCreated,HttpStatus.CREATED);
     }
 
+    @GetMapping(produces = APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    public Iterable<Booking> listOfParkingLots() {
+        return bookingService.findAll();
+    }
+
 }

@@ -15,4 +15,7 @@ public class BookingService {
         return bookingRepo.save(booking);
     }
 
+    public Iterable<Booking> findAll() {
+        return bookingRepo.findAll();
+    }
 }
